@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="400" height="400"></canvas>
+</body>
+<script>
+    var a=document.querySelector("canvas")
+    var b=a.getContext("2d")
+    b.fillRect(50,50,200,200)
+    b.strokeRect(20,20,10,10)
+    b.clearRect(50,50,20,20)
+    b.beginPath()
+    b.moveTo(200,200)
+    b.lineTo(200,400)
+    b.lineTo(400,400)
+    b.closePath()
+    b.fill()
+    b.beginPath()
+    b.arc(100,300,100,(Math.PI/180)*90,(Math.PI/180)*180,false)
+    b.stroke()
+    b.closePath()
+</script>
+</html>

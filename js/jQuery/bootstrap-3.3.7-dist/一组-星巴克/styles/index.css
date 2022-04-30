@@ -1,0 +1,91 @@
+.qq{
+    margin-top: -25px;
+    margin-left: 50px;
+}
+.qq a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 30px;
+}
+.ww{
+    padding: 0;
+    margin: 0;
+}
+.ww img{
+    overflow: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.ee{
+    float: right;
+    cursor: pointer;
+    border: 5px solid pink;
+}
+.eee{
+    border: 1px solid pink;
+    cursor: pointer;
+}
+.aa{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+li{
+    margin-bottom: 10px;
+    width: 200px;
+}
+hr{
+    width: 350px;
+}
+.ss{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.zz{
+    float: right;
+    margin-top: -70px;
+    cursor: pointer;
+}
+.xx{
+    margin-left: -30px;
+    cursor: pointer;
+}
+.tt{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    cursor: pointer;
+}
+.cc{
+    width: 65%;
+}
+@media screen and (max-width: 500px){
+    .tt{
+        display: block;
+    }
+}
+@media screen and (min-width: 500px){
+    .rr{
+        font-weight: 600;
+        font-size: 24px;
+        margin-top: 30px;
+        text-align: center;
+        color: black;
+    }
+}
+@media screen and (min-width: 1000px){
+    .rr{
+        font-weight: 600;
+        font-size: 24px;
+        margin-top: 300px;
+        text-align: center;
+        color: black;
+    }
+}
+

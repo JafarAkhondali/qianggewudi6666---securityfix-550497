@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="qq">开启</button>
+    <button id="ww">关闭</button>
+    <div id="ee">00:00:00</div>
+</body>
+<script>
+var a=0,b=0,c=0;
+var aa="00",bb="00",cc="00";
+function n(){
+    a++;
+    if(a>=60){
+        b++;
+        a=0;
+    }
+    if(b>=60){
+        c++;
+        b=0;
+    }
+    a<10?aa="0"+a:aa=a;    
+    b<10?bb="0"+b:bb=b;    
+    c<10?cc="0"+c:cc=c;    
+    document.getElementById("ee").innerHTML=cc+":"+bb+":"+aa
+}
+document.getElementById("qq").onclick=function(){
+    d=setInterval(n,1000);
+    document.getElementById("qq").setAttribute("disabled","disabled");
+}
+document.getElementById("ww").onclick=function(){
+    clearInterval(d)
+    document.getElementById("qq").removeAttribute("disabled");
+}
+</script>
+</html>

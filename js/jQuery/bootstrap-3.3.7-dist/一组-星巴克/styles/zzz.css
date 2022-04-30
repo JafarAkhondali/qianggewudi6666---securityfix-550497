@@ -1,0 +1,184 @@
+html{
+    letter-spacing: 0.4px;
+}
+.Left{
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    padding: 24px;
+}
+.leftdiv{
+    padding: 0;
+}
+.none{
+    display: none;
+}
+.leftdiv li{
+    float: left;
+    font-weight: 700;
+    font-size: 1.6rem;
+    height: 45px;
+}
+.leftdiv li a{
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000;
+    line-height: 36px;
+}
+.Right{
+    float: right;
+    width: 70%;
+}
+.Right2{
+    float: right;
+    width: 100%;
+}
+.flrigh{
+    float: right;
+}
+.leftdiv img{
+    width: 36px;
+    height: 36px;
+    opacity: 0.8;
+}
+.flrigh img{
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+}
+.Left2{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.Left3 p{
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+.Left2 p{
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -104px;
+    margin-top: -18px;
+    height: 50px;
+}
+
+
+/* 右浮动 */
+.row{
+    margin: 0;
+}
+.ad>div{
+    background-image: url(../imgs/lijiahui/hero.jpg);
+    text-align: center;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: -6;
+}
+.ad>div::before{
+    background-image: linear-gradient(
+        -180deg
+        , rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 81%);
+            content: '';
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            z-index: -5;
+}
+.ad p{
+    color: white;
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+/* .adimg img{ */
+    /* margin-bottom: 24px; */
+/* } */
+.adimg{
+    margin-top: 70px;
+}
+.adimg img{
+    /* overflow: hidden; */
+    /* width: 1000px; */
+    height: 275px;
+    width: 1180px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: -1;
+}
+.adimg+div{
+    margin-bottom: 30px;
+}
+.cn {
+    text-align: center
+}
+.cn>div{
+    margin-left: 50px;
+}
+.one{
+     width: 213px;
+     height: 466px;
+     text-align: center;
+     margin-left: 55px;
+}
+.two{
+    width: 213px;
+     height: 466px;
+     text-align: center;
+     margin-left: 55px;
+}
+.three{
+    width: 213px;
+    height: 466px;
+    text-align: center;
+    margin-left: 55px;
+}
+.one1{
+    width: 210px;
+    height: 100px;
+    background:url(../imgs/wd/icon-opennow.svg) no-repeat center center;
+    background-color: #01a862;
+    background-size: 45px 45px;
+}
+.one1 span{
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+.one1 p{
+    color: white;
+    padding-top: 25px;
+    font-size: 18px;
+}
+.qw{
+    color: #01a862;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.ui li{
+    margin-top: 35px;
+
+}
+
+.ui{
+    padding-left: 60px;
+    font-size: 16px;
+}
+.mmq img{
+    width: 545px;
+    height: 460px;
+}
+.aad img{
+    width: 212px;
+    height: 353px;
+}

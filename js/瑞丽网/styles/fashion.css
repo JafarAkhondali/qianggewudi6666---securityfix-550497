@@ -1,0 +1,217 @@
+.qq1{
+    width: 100%;
+    background: red;
+    height: 191px;
+    padding-top: 5px;
+}
+.qq1 img{
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -150px;
+}
+.qq2{
+    width: 100%;
+    background: black;
+    height: 55px;
+}
+.qq{
+    width: 1091px;
+    margin: 0 auto;
+}
+.qq a{
+    color: white;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.qq3{
+    float: left;
+    position: relative;
+    left: -20px;
+}
+.qq4{
+    float: right;
+}
+.qq5{
+    width: 1091px;
+    margin: 0 auto;
+    padding-top: 15px;
+    position: relative;
+    left: -20px;
+}
+.qq6 a{
+    color: white;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.qq7{
+    float: right;
+    margin-top: -20px;
+}
+.ww{
+    width: 1091px;
+    margin: 0 auto;
+}
+.ww1{
+    margin-top: 20px;
+}
+.ww1 a{
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+}
+.ww2{
+    margin-top: 10px;
+    float: left;
+}
+.ww3{
+    margin-top: 10px;
+    float: right;
+}
+.ww4{
+    margin-top: 30px;
+}
+.ww5{
+    margin-top: 40px;
+    display: flex;
+}
+.ww6{
+    width: 93px;
+    height: 24px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 24px;
+}
+.ww7{
+    width: 450px;
+    height: 196px;
+    margin-left: 20px;
+    font-family: 宋体;
+    margin-top: 10px;
+}
+.ww8{
+    font-family: 宋体;
+    font-size: 24px;
+    margin-top: 20px;
+}
+.ww9{
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 宋体;
+}
+.www{
+    margin-top: 30px;
+}
+p{
+    cursor: pointer;
+}
+.ee{
+    margin-top: 30px;
+}
+.ee1{
+    margin-top: 30px;
+    width: 100px;
+}
+.ee2{
+    margin-left: -60px;
+}
+#qq{
+    margin-top: 30px;
+}
+#qq img{
+    display: none;
+}
+img{
+    cursor: pointer;
+}
+p{
+    margin-top: 20px;
+}
+.ee3{
+    margin-top: 90px;
+}
+.rr{
+    margin-top: 20px;
+    display: flex;
+}
+.rr2{
+    width: 170px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.mm{
+    position: fixed;
+    right: 0;
+    top: 500px;
+}
+.mm img{
+    display: block;
+    border-top:1px solid #a1a1a1 ;
+    cursor: pointer;
+}
+.ss{
+    width: 787px;
+    height: 462px;
+}
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 9999;
+      }
+
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+        --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
+    --swiper-navigation-color: white;/* 单独设置按钮颜色 */
+    --swiper-navigation-size: 60px;/* 设置按钮大小 */
+      }
+        .my-bullet-active{
+  background: red;
+  opacity: 1;
+}
+.ss .swiper-button-next,.swiper-button-prev{
+    display: none;
+}
+.ss:hover .swiper-button-next{
+    display: block;
+}
+.ss:hover .swiper-button-prev{
+    display: block;
+}
+#qq>.active>img{
+    display: block;
+    margin-top: 20px;
+}
+#qq>.active>p{
+    display: none;
+}

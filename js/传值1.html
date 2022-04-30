@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<input type="text" id="qq">
+<button id="ww">></button><br>
+<button id="ee">></button>
+</body>
+<script>
+	document.getElementById("ww").onclick=function(){
+		var a=document.getElementById('qq').value;
+		location.href="传值2.html?姓名:小明&电话:110&年龄:18"+a;
+	}
+
+
+	document.getElementById("ee").onclick=function(){
+		history.forward();
+	}
+</script>
+</html>

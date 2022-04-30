@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: 0;
+        }
+		body{background-color: #1E1E1E}
+        #box{
+	width: 600px;
+	height: 300px;
+	padding: 7px;
+	border: 1px solid hsla(0,0%,100%,0.30);
+	margin: 100px auto;
+	position: relative;
+        }
+        .screen{
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .screen li{
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+            float: left;
+        }
+        .screen ul{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4200px;
+        }
+        #box ol{
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            margin-left: -50px;
+            line-height: 20px;
+            text-align: center;
+        }
+        #box ol li{
+            float: left;
+            width: 6px;
+            height: 6px;
+            background: #fff;
+            opacity: 0.6;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #box ol li.current{
+            background: #09f;
+            opacity: 1;
+            transform: scale(1.5);
+        }
+        #arr{
+            display: none;
+            z-index: 999;
+        }
+        #arr span{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+        #arr #right{
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="screen">
+            <ul>
+                <li><img src="images/t1.png" width="600" height="300"></li>
+                <li><img src="images/t2.png" width="600" height="300"></li>
+                <li><img src="images/t3.png" width="600" height="300"></li>
+                <li><img src="images/t4.png" width="600" height="300"></li>
+                <li><img src="images/t5.png" width="600" height="300"></li>
+                <li><img src="images/t6.png" width="600" height="300"></li>
+            </ul>
+            <ol></ol>
+        </div>
+        <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+    </div>
+    <script src="animate.js"></script>
+</body>
+</html>

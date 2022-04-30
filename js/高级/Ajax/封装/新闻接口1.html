@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border-collapse: collapse;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <ul id="qq"></ul>
+</body>
+<script src="ajax.js"></script>
+<script>
+    function hh(aa){
+        for(var i in aa){
+                var qq="<li><a href='新闻接口2.html#"+aa[i].id_news+"'>"+aa[i].title_news+"---"+aa[i].time_news+"</a></li>"
+                document.getElementById("qq").innerHTML+=qq
+                }
+    }
+    ajax("post","http://www.qhdlink-student.top/student/newsa.php","username=zyp&userpwd=123456&userclass=70&type=4",hh)
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+</body>
+<script>
+    function n(fn,time){
+        var x=null;
+        return function(){
+            var q=this
+            if(!x){
+                fn.call(q,"")
+                // fn()
+                x=setTimeout(function(){
+                    x=null
+                },time)
+            }
+        }
+    }
+    function m(){
+        this.innerHTML+=Math.random()
+    }   
+    document.querySelector("button").onclick=n(m,1000)
+</script>
+</html>

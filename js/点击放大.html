@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #qq{
+        width: 100px;
+        height: 100px;
+        background: pink;
+        margin: 200px;
+        transition: all 1s;
+    }
+    .qq{
+        transform: scale(2);
+    }
+</style>
+<body>
+    <div id="qq"></div>
+</body>
+<script>
+    document.getElementById("qq").onclick=function(){
+        this.className===""?this.className="qq":this.className=""
+    }
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function _64(img){
+        var a=document.createElement("canvas")
+        a.width=img.width
+        a.height=img.height
+        var b=a.getContext("2d")
+        b.drawImage(img,0,0,img.width,img.height)
+        var c=a.toDataURL("image/jpeg",0.1)        //受跨域问题影响，本地环境在firefox/服务器中可以正常运行，第一个参数是图片格式， 第二个参数1表示无损，0~1之间的值设置压缩比例
+        console.log(c)
+        return c
+    }
+    function n(){
+        var a=new Image()
+        a.src='4.jpg'
+        a.onload=function(){
+            var b=_64(a)
+            var c=document.createElement('img')
+            c.src=b
+            document.body.appendChild(c)
+        }
+    }
+    n()
+</script>
+</html>

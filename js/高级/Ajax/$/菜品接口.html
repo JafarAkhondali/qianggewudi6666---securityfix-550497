@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border-collapse: collapse;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="ee"></table>
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:"http://www.qhdlink-student.top/student/coacha.php",
+            dataType:"json",
+            type:"post",
+            async:true,
+            data:{
+                "username":"zyp",
+                "userpwd":"123456",
+                "userclass":"70",
+                "type":"4",
+            },
+            success:function(aaa){
+            for(var n in aaa){
+                var ii=$("<tr></tr>")
+                for(var m in aaa[n]){
+                    var iii=$("<td></td>")
+                    if(m==="path_coach"){
+                        iii.html("<img src='"+'http://www.qhdlink-student.top/'+aaa[n][m]+"'>")
+                    }
+                    else{
+                        iii.html(aaa[n][m])
+                    }
+                    ii.append(iii)
+                }
+                $("#ee").append(ii)
+            }
+        }
+        })
+        })
+</script>
+
+</html>

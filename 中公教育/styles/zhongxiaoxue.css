@@ -1,0 +1,339 @@
+.one{
+	background: #f8f9fb;
+	height: 50px;
+}
+.two{
+	width: 1200px;
+	height: 50px;
+	margin: 0 auto;
+}
+.three{
+	position: relative;
+	top: 10px;
+	margin-right: 20px;
+}
+.four{
+	position: relative;
+	top: 10px;
+	left:300px ;
+	margin-right: 20px;
+}
+.five{
+	position: relative;
+	top: 10px;
+	left:285px ;
+}
+.ee{
+	padding-top:16px ;
+}
+.tt{
+	position: relative;
+	left:30px ;
+	font-weight: 900;
+
+}
+.yy{
+	position: relative;
+	left:50px ;
+	margin-right: 10px;
+}
+.uu{
+	margin-right: 100px;
+}
+.aa{
+	position: relative;
+	left:125px ;
+	bottom: 400px;
+}
+.ss{
+	position: relative;
+	left:58px ;
+	bottom: 250px;
+}
+.dd{
+	position: relative;
+	left: -8px;
+	bottom: 100px;
+}
+.ff{
+	position: relative;
+	left:-63px ;
+	bottom: 398px;
+	color: white;
+}
+.hh{
+	position: relative;
+	left:-105px ;
+	bottom: 248px;
+	color: white;
+}
+.gg{
+	position: relative;
+	left:-138px ;
+	bottom: 98px;
+	color: white;
+}
+.jj{
+	position: relative;
+	left:-110px ;
+	bottom: 398px;
+}
+.kk{
+	position: relative;
+	left:-415px ;
+	bottom: 248px;
+}
+.ll{
+	position: relative;
+	left:-645px ;
+	bottom: 98px;
+}
+.zz{
+	position: relative;
+	left:700px ;
+	bottom: 440px;
+	font-size: 24px;
+	color: #758499;
+}
+.xx{
+	position: relative;
+	left:540px ;
+	bottom: 418px;
+}
+.cc{
+	position: relative;
+	left:550px ;
+	bottom: 418px;
+}
+.bb{
+	position: relative;
+	top: 30px;
+}
+.bb,.mm,.au,.ai{
+	font-weight: 900;
+	font-size: 20px;
+	margin-left: 10px;
+}
+.nn{
+	position: relative;
+	left:420px ;
+	bottom: 720px;
+	width: 400px;
+}
+.nn li{
+	margin-bottom: 10px;
+}
+.mm{
+	position: relative;
+	bottom: 700px;
+}
+.aq{
+	position: relative;
+	left:420px ;
+	bottom: 652px;
+	width: 400px;
+}
+.aq li{
+	margin-bottom: 10px;
+}
+.aw{
+	position: relative;
+	left:125px ;
+	bottom: 445px;
+	width: 380px;
+	height: 20px;
+}
+.ae{
+	position: relative;
+	left:125px ;
+	bottom: 315px;
+	width: 380px;
+	height: 20px;
+}
+.ar{
+	position: relative;
+	left:125px ;
+	bottom: 185px;
+	width: 380px;
+	height: 20px;
+}
+.at{	
+	position: relative;
+	bottom: 100px;
+}
+.ay{
+	position: relative;
+	left:900px ;
+	bottom: 795px;
+	width: 280px;
+}
+.ay li{
+	margin-bottom: 5px;
+}
+.au{
+	position: relative;
+	bottom: 1090px;
+	left:875px ;
+}
+.ai{
+}
+.ap{
+	width: 340px;
+	height: 280px;
+	position: relative;
+	bottom: 1425px;
+	left:870px ;
+}
+.ai{
+	position: absolute;
+	top: 20px;
+	left: 5px;
+}
+.as{
+	border: 1px solid blue;
+	color: blue;
+	width: 75px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.ad{
+	position: absolute;
+	top: 75px;
+	left: 20px;
+}
+.af{
+	width: 210px;
+	height: 80px;
+	position: absolute;
+	top: 65px;
+	left: 110px;
+}
+.ag{
+	margin-right: 5px;
+}
+.ah{
+	width: 210px;
+	height: 80px;
+	position: absolute;
+	top: 125px;
+	left: 110px;
+}
+.aj{
+	margin-right: 5px;
+}
+.ak{
+	width: 210px;
+	height: 80px;
+	position: absolute;
+	top: 180px;
+	left: 110px;
+}
+.al{
+	margin-right: 5px;
+}
+.aaa{
+	width: 785px;
+	position: absolute;
+	top: 850px;
+}
+.bbb{
+	float: left;
+	margin-right: 50px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.qqq{
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-weight: 600;
+	font-size: 20px;	
+}
+.www{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.eee{
+	margin-top: 50px;
+	text-align: center;
+}
+.rrr{
+	width: 400px;
+	height: 400px;
+	border: 1px solid #f1f1f1;
+ 	position: relative;
+ 	bottom: 1100px;
+ 	left: 800px;
+}
+.ttt{
+	font-weight: 900;
+	color: black;
+	position: relative;
+	top: 20px;
+	left: 10px;
+}
+.yyy{
+	position: relative;
+	top: 30px;
+	left: 10px;
+}
+.uuu{
+	position: relative;
+	top: 50px;
+	left: 20px;
+	margin-bottom: 10px;
+}
+.sss{
+	height:200px ;
+	background: #f8f9fb;
+	position: relative;
+	top: 2700px;
+}
+.ddd{
+	position: absolute;
+	left: -100px;
+	top: 1170px;
+	z-index: 1;
+}
+.zzz{
+	position: relative;
+	top: 300px;
+	left: 70px;
+	z-index: 2;
+	width: 200px;
+}
+.fff{
+	margin-bottom: 10px;
+	color: black;
+	width: 200px;
+}
+.ggg{
+	margin-bottom: 5px;
+	width: 200px;
+}
+.xxx{
+	position: relative;
+	top: 210px;
+	left: 330px;
+	z-index: 2;
+	width: 200px;
+}
+.ccc{
+	position: relative;
+	top: 100px;
+	left: 590px;
+	z-index: 2;
+	width: 200px;
+}
+.vvv{
+	text-align: center;
+	position: relative;
+	top: 230px;
+}
+.mmm{
+	margin-right:5px ;
+}
+.nnn{
+	text-align: center;
+	position: relative;
+	top: 240px;
+}

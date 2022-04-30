@@ -1,0 +1,149 @@
+.qq{
+    height: 76px;
+    padding-top: 10px;
+}
+a:hover{
+    color: #c5ae82;
+}
+.qq1{
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+}
+.qq1 a{
+    font-size: 14px;
+}
+.qq5 li{
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 100px;
+}
+.qq4 li{
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.qq2{
+   width: 50%;
+   position: relative;
+   z-index: 9999;
+   background-color: white;
+   border-radius: 50%;
+}
+.qq3{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.qq6{
+    text-align: center;
+}
+.qq5>li:hover{
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+    transition: all 1s;
+}
+.qq4>li:hover{
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+    transition: all 1s;
+}
+.qq8{
+    position: absolute;
+    top: 85px;
+    left: 0;
+    padding-left: 260px;
+    padding-top: 10px;
+    width: 100%;
+    background-color: black;
+    height: 80px;
+}
+.qq8 a{
+    color: white;
+    font-size: 14px;
+}
+.qq1 ul ul{
+    display: none;
+} 
+.qq7:hover .qq8{
+    display: block;
+}
+.qq10{
+    margin-left: -30px;
+} 
+.ww{
+    width: 100%;
+    display: block;
+}
+.ww1{
+   width: 100%;
+}
+.ww2{
+    width: 100%;
+    display: block;
+}
+.ee{
+    background-color: #eeeeee;
+    height: 420px;
+    overflow: hidden;
+}
+.ee1{
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+}
+.ee2{
+    width: 1050px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.rr{
+    background-color: black;
+    height: 150px;
+    width:100%;
+}
+.ee2 p{
+    font-size: 14px;
+}
+.ee3{
+    margin-top: 30px;
+    overflow: hidden;
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ee2 p{
+    color: white;
+}
+.ee4{
+    color: white;
+    float: right;
+    margin-top: -30px;
+}
+.ee5{
+    margin-top: 30px;
+}
+.aa{
+    position: fixed;
+    left: 10px;
+    top: 400px;
+    cursor: pointer;
+    width: 4%;
+}
+.bb{
+    position: fixed;
+    right: 10px;
+    top: 50px;
+    cursor: pointer;
+}
+.cc{
+    width: 362px;
+    height: 571px;
+    background-color: pink;
+    position: fixed;
+    right: 80px;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+}

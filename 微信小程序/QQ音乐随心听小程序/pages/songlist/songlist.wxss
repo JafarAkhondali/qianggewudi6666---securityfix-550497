@@ -1,0 +1,179 @@
+/* pages/songlist/songlist.wxss */
+page{
+  background-color: rgb(248, 255, 248);
+}
+.searchBox{
+  width: 90%;
+  height: 70rpx;
+  background-color: rgb(236, 236, 236);
+  margin:15rpx  auto;
+  border-radius: 60rpx;
+  overflow: hidden;
+}
+.searchBox .txt{
+  width: 68%;
+  height: 70rpx;
+  /* background-color: skyblue; */
+  float: left;
+  padding-left: 50rpx;
+  font-size: 25rpx;
+}
+.searchBox .btn{
+  width: 120rpx;
+  height: 70rpx;
+  /* background:yellow; */
+  float: right;
+  position: relative;
+}
+.searchBox .btn image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 0;left: 0;
+  right: 0;bottom: 0;
+  margin: auto;
+}
+/* banner */
+.banner{
+  width: 90%;
+  height: 300rpx;
+  margin: 15rpx auto;
+}
+.banner image{
+  display: block;
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+}
+/* 歌曲列表 */
+.musicbox{
+  width: 90%;
+  height: 130rpx;
+  /* background: pink; */
+  margin: 15rpx auto;
+  box-shadow: 0px 1rpx 1rpx #e4e4e4;
+}
+.musicbox view{
+  float: left;
+}
+.musicbox .imgbox{
+  width: 130rpx;
+  height: 130rpx;
+  position: relative;
+}
+.imgbox image{
+  width: 130rpx;
+  height: 130rpx;
+  display: block;
+  border-radius: 10rpx;
+ 
+}
+.contentbox{
+  width: 45%;
+  height: 130rpx;
+  /* background-color: orange; */
+  padding-left: 60rpx;
+
+}
+.contentbox text{
+  display: block;
+  width: 310rpx;
+  /* background-color:yellow; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contentbox .mname{
+  font-size: 35rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+
+}
+.contentbox .name{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: rgb(110, 110, 110);
+}
+.btnbox{
+  width: 130rpx;
+  height: 130rpx;
+  position: relative;
+
+}
+.btnbox image{
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  left: 0;right: 0;
+  bottom: 0;top: 0;
+  margin: auto;
+}
+/* 个人信息 */
+.userbox{
+  width: 90%;
+  height: 80rpx;
+  margin: 15rpx auto;
+  position: relative;
+}
+.user_pic{
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.username{
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  margin:0rpx 20rpx ;
+  top: -15rpx;
+}
+.uservip{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  top: -10rpx;
+}
+.main{
+width: 95%;
+height:349rpx;
+/* background-color:pink; */
+position: relative;
+left: 5%;
+}
+.title{
+  font-size: 30rpx;
+  font-weight: bold;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.main scroll-view{
+  width: 100%;
+  height: 258rpx;
+  /* background-color: orange; */
+  white-space: nowrap;
+}
+.main scroll-view .itembox{
+  width: 200rpx;
+  height: 250rpx;
+  /* background-color: skyblue; */
+  margin-right:20rpx ;
+  display: inline-block;
+  text-align: center;
+  
+}
+.itembox image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.itembox .txt{
+  font-size: 25rpx;
+  color: rgb(75, 75, 75);
+  width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

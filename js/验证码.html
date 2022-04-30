@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+    <span id="qq"></span><a href="javascript:;" id="ww">看不清，换一个</a>
+</body>
+<script>
+function xx(){
+    var q=["0","1","2","3","4","5","6","7","8","9","q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
+    var w=[];
+    for(var i=0;i<4;i++){
+        var e=Math.floor(Math.random()*36);
+        w+=q[e];
+    }
+    document.getElementById("qq").innerHTML=w;
+}
+xx()
+document.getElementById("ww").onclick=xx;
+
+
+document.write("<br>")
+
+
+    var str="hello";
+    var n="";
+    for(var i=0;i<4;i++){
+        var z=Math.floor(Math.random()*5);
+        n+=str[z];
+    }
+    document.write(n)
+</script>
+</html>

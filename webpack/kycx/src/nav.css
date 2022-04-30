@@ -1,0 +1,84 @@
+#header .top{
+    height: 90px;
+    width:1400px;
+    margin:0 auto;
+    border-bottom:1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+#header .top .logo img{
+    margin-top:20px;
+}
+#header .top>ul li{
+    float:left;
+    line-height:90px;
+    height:90px;
+    font-size:17px;
+    position: relative;
+    margin:0 23px;
+    z-index:1;
+    cursor: pointer;
+} 
+#navul>li>span{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    width:100%;
+    height:100%;
+}
+#header .top .act span{
+    color:#ce0e2d;
+}
+
+#header .top .act::before{
+    content: "";
+    height:3px;
+    background: #ce0e2d;
+    position: absolute;
+    bottom:5px;
+    width:100%;
+    display:inline-block;
+}
+#header .top .tul{
+    left:0;
+    width:1902px;
+    height:60px;
+    position: absolute;
+    top:90px;
+    background:#cccccc ;
+}
+#navdiv{
+    width:100%;
+    height:60px;
+    position: absolute;
+    top: 90px;
+    left:0;
+    z-index: 1;
+}
+.navdiv_1{
+    width:100%;
+    height:60px;
+    background: #ccc;
+    text-align: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    line-height:60px;
+}
+.navdiv_1>div{
+    line-height:60px;
+    height:60px;
+}
+.navdiv_1 .con li,.navdiv_1 .con ul{
+    float:left;
+}
+#navdiv .tit{
+    font-size:20px;
+    font-weight:bold;
+    margin-right:40px;
+}
+#navdiv .con li{
+    padding:0 40px;
+}
+
+

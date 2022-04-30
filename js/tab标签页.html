@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #qq li{
+            list-style-type: none;
+            float: left;
+            margin-right: 20px;
+        }
+        #ww{
+            clear: both;
+        }
+        #ww>*{
+            display: none;
+        }
+        #ww :first-child{
+            display: block;
+        }
+        #qq>*{
+            background: none;
+        }
+        #qq :first-child{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul id="qq">
+        <li data-q="0">1</li>
+        <li data-q="1">2</li>
+        <li data-q="2">3</li>
+    </ul>
+    <div id="ww">
+        <div>q</div>
+        <div>w</div>
+        <div>e</div>
+    </div>
+</body>
+<script>
+    document.getElementById("qq").onmouseover=function(e){
+        if(e.target.nodeName==="LI"){
+            var a=e.target.getAttribute("data-q")
+            var b=document.getElementById("ww").children
+            var c=document.getElementById("qq").children
+            for(var i=0;i<b.length;i++){
+                b[i].style.display="none"
+            }
+            b[a].style.display="block"
+            for(var i=0;i<c.length;i++){
+                c[i].style.background="none"
+            }
+            c[a].style.background="pink"
+        }
+    }
+</script>
+</html>

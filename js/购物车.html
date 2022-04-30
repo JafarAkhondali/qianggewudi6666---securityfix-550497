@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style>
+	li{
+		list-style-type: none;
+	}
+</style>
+</head>
+<body>
+	<button onclick="x('手机')">手机</button>
+	<button onclick="x('电脑')">电脑</button>
+	<button onclick="x('飞机')">飞机</button>
+	<button onclick="x('火箭')">火箭</button>
+	<button onclick="x('卫星')">卫星</button>
+	<button id="ww">购物车</button><br>
+<!-- 	<button onclick="z('手机')">删除</button>
+	<button onclick="z('电脑')">删除</button>
+	<button onclick="z('飞机')">删除</button>
+	<button onclick="z('火箭')">删除</button>
+	<button onclick="z('卫星')">删除</button> -->
+	<ul id="qq"></ul>
+</body>
+<script>
+	var arr1=[];
+	var arr2=[];
+	function x(g){
+		if(arr1.indexOf(g)===-1){
+			arr1.push(g)
+			arr2.push(1)
+		}
+		else{
+			arr2[arr1.indexOf(g)]++;   //通过索引值找到商品的数量然后+1
+		}
+	}
+	document.getElementById("ww").onclick=function(){
+		document.getElementById('qq').innerHTML="";             //清空
+		for(var i in arr1){
+			document.getElementById('qq').innerHTML+="<li>"+arr1[i]+":"+arr2[i]+"</li>"
+		}
+	}
+	/* 	function z(g){
+		if(arr1.indexOf(g)!==-1){
+			arr2[arr1.indexOf(g)]--;
+		}
+		if(arr2[arr1.indexOf(g)]<=1){
+			arr1.pop()
+		}
+	} */
+</script>
+</html>

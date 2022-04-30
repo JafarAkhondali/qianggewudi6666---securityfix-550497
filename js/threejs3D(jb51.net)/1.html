@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/photo-sphere-viewer.min.js"></script>
+<script src="js/three.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="description">
+         <h1>苑中遇雪</h1>
+         <p> 紫禁仙舆诘旦来，青旂遥倚望春台。</p>
+         <p>不知庭霰今朝落，疑是林花昨夜开。</p>
+        </div>
+        <div id="my-pano" class="pano"></div>
+        </div> 
+       </body>
+       <script>
+        window.onload = function() {
+         var div = document.getElementById('my-pano');
+         var PSV = new PhotoSphereViewer({
+         // Panorama, given in base 64
+         panorama: 'images/snow.jpg',
+        
+         // Container
+         container: div,
+        
+         autoload:true,
+        
+         // Deactivate the animation
+         time_anim: 2000,
+        
+         // Display the navigation bar
+         navbar: true,
+        
+         // Resize the panorama
+         size: {
+         width: '70%',
+         height: 700
+         }
+        });
+        };
+        </script>
+</body>
+
+</html>

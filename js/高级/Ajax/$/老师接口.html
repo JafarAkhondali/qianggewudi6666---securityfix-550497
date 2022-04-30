@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border-collapse: collapse;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="ee"></table>
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $.post("http://www.qhdlink-student.top/student/coach.php",{"username":"zyp",
+                "userpwd":"123456",
+                "userclass":"70",
+                "type":"4"},function(qq){
+                    console.log(qq)
+            var aaa = JSON.parse(qq);
+            console.log(aaa)
+            for(var n in aaa){
+                var ii=document.createElement("tr")
+                for(var m in aaa[n]){
+                    var iii=document.createElement("td")
+                    if(m==="path_coach"){
+                        iii.innerHTML="<img src='"+'http://www.qhdlink-student.top/'+aaa[n][m]+"'>"
+                    }
+                    else{
+                        iii.innerHTML=aaa[n][m]
+                    }
+                    ii.appendChild(iii)
+                }
+                document.getElementById("ee").appendChild(ii)
+            }
+        })
+</script>
+</html>

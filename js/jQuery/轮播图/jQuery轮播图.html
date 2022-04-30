@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #qq{
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            margin: 0 auto;
+            display: flex;
+        }
+        img{
+            width: 300px;
+            height: 200px; 
+        }
+    </style>
+</head>
+<body>
+        <div id="qq">
+            <img src="1.jpg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="3.jpg" alt="">
+            <img src="4.jpg" alt="">
+        </div>
+</body>
+<script src="../jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script>
+    $(function(){
+        function x(){
+            $("#qq").scrollLeft($("#qq").scrollLeft()+100)
+            if($("#qq").scrollLeft()>=300){
+                $("#qq").scrollLeft(0)
+                $("#qq").append($("#qq").children().eq(0))
+                clearInterval(a)
+                y()
+            }
+        }
+        function y(){
+            setTimeout(function(){
+                a=setInterval(x,100)
+            },1000)
+        }
+        y()
+    })
+</script>
+</html>

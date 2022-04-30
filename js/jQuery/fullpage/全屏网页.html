@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.fullpage.min.css">
+    <style>
+        .slide,h3{
+            text-align: center;
+        }
+        .aa{
+            background: pink;
+        }
+        .bb{
+            background: green;
+        }
+        .cc{
+            background: lightblue;
+        }
+        .dd{
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section aa">
+            <h3>11111</h3>
+        </div>
+        <div class="section bb">
+            <div class="slide">
+                222221
+            </div>
+            <div class="slide">
+                222222
+            </div>
+            <div class="slide">
+                222223
+            </div>
+            <div class="slide">
+                222224
+            </div>
+        </div>
+        <div class="section cc">
+            <h3>33333</h3>
+        </div>
+        <div class="section dd">
+            <h3>44444</h3>
+        </div>
+    </div>
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script src="jquery.fullpage.min.js"></script>
+<script>
+    $(function(){
+        $("#fullpage").fullpage()
+    })
+</script>
+</html>

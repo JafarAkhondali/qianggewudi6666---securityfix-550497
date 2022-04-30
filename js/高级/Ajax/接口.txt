@@ -1,0 +1,70 @@
+ 自己构建界面
+
+功能1:  注册
+   请求地址
+      http://useker.cn/reg
+   请求方式 post
+    参数
+         参数1  uname    类型 string    必填
+         参数2  upwd     类型 string    必填
+         参数3  uage     类型 string    必填
+         参数4  uphone   类型 string    必填
+         参数5  realname 类型 string    必填
+
+   返回结果
+           {code:1,msg:"注册成功"}
+---------------------------------------------
+
+功能2 用户名不能重复,输入的要判断
+ 请求地址
+     http://useker.cn/checkName
+   请求方式 get
+    参数
+         参数1  uname 类型 string    必填
+
+   返回结果
+           {code:1,msg:"该用户已注册"}
+---------------------------------------------
+
+功能3:登录
+       请求地址
+         http://useker.cn/login
+     请求方式 post
+    参数
+         参数1  uname   类型 string  必填
+         参数2  upwd     类型 string 必填
+
+   返回结果
+           {code:1,msg:"登录成功"}
+ ---------------------------------------------
+
+功能4:查询到所有
+       请求地址
+         http://useker.cn/getUsers
+     请求方式 get
+    参数
+          无参数
+
+   返回结果 成功才有data属性
+           {code:1,msg:"查询成功",data:[xxx]}
+---------------------------------------------
+
+功能5:根据用户名查询
+       请求地址
+         http://useker.cn/getByName
+     请求方式 get
+    参数
+        参数1  uname  类型 string
+
+   返回结果 成功才有data属性
+           {code:1,msg:"查询成功",data:[xxx]}
+ ---------------------------------------------
+功能6:删除功能
+       请求地址
+         http://useker.cn/delete
+     请求方式 post
+    参数
+        参数1  uname  类型 string
+
+   返回结果 删除才有data属性
+           {code:1,msg:"查询成功"}

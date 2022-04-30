@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	var reg=/^(13|15|16|17|18)\d{9}$/
+	var str=prompt("请输入电话:")
+	if(reg.test(str)){
+		alert("正确")
+	}
+	else{
+		alert("错误")
+	}
+	var a=/^\w+@\w+\.\w{2,3}$/
+	var str=prompt("请输入邮箱:")
+	if(a.test(str)){
+		alert("正确")
+	}
+	else{
+		alert("错误")
+	}
+</script>
+</html>

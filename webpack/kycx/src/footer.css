@@ -1,0 +1,60 @@
+dl,dt,dd,p{
+    margin:0;
+    padding:0;
+}
+#footer{
+   height:420px;
+   background: #efefef;
+   padding-top:18px;
+}
+#footer .foot{
+   width:1230px;
+   height:323px;
+   margin:0 auto;
+   display: flex;
+}
+#footer .down{
+   height:76px;
+   line-height:76px;
+   width:1130px;
+   margin:0 auto;
+   padding-left:100px;
+}
+#footer .foot_lef{
+    display: flex;
+    justify-content: space-between;
+    padding-top:60px;
+    border-right:1px solid #666;
+}
+#footer .foot_lef dl{
+    width:130px;
+}
+#footer .foot_lef dl dt{
+    font-size:20px;
+    font-weight:500;
+    margin-bottom:30px;
+}
+#footer .foot_lef dl dd{
+    line-height:34px;
+    color:#474747;
+}
+#footer .foot_rig{
+    padding-left:50px;
+}
+#footer .foot_rig .pic>img{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#footer .foot_rig p{
+    line-height:30px;
+    font-size:16px;
+}
+#footer .foot_rig p span{
+    font-size:14px;
+    color:#666;
+    padding-left:7px;
+}
+#footer .foot_rig p>img{
+   height:50px; 
+   margin-left:10px;
+}

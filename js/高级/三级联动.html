@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <select name="" id="a">
+            <option value="">请选择</option>
+        </select>
+        <select name="" id="b">
+            <option value="">请选择</option>
+        </select>
+        <select name="" id="c">
+            <option value="">请选择</option>
+        </select>
+    </form>
+</body>
+<script>
+    let a=new XMLHttpRequest()
+    a.open("get","https://mock.mengxuegu.com/mock/612498b7a7efc47d05b92506/example/cityData")
+    a.setRequestHeader("content-type","application/x-www-form-urlencoded")
+    a.send()
+    a.onreadystatechange=function(){
+        if(a.readyState==4&&a.status==200){
+            let aa=JSON.parse(a.responseText)
+            let q=aa.data
+            console.log(q);
+            for(var i in q){
+                document.querySelector("#a").innerHTML+=`<option value='${q[i].value}'>${q[i].text}</option>`
+                // var w=q[i].children
+                // for(var j in w){
+                //     document.querySelector("#b").innerHTML+=`<option>${w[j].text}</option>`
+                // }
+            }
+            document.querySelector("#a").onchange=function(e){
+                n=e.target.value
+                console.log(n);
+            function x(){
+                document.querySelector("#b").innerHTML=`<option value="">请选择</option>`
+                for(var i in q){
+                if(q[i].value==n){
+                    w=q[i].children
+                    for(var j in w){
+                        document.querySelector("#b").innerHTML+=`<option value=${w[j].value}>${w[j].text}</option>`
+                    }
+                }
+                }
+            }
+            x()
+        }
+            document.querySelector("#b").onchange=function(e){
+                m=e.target.value
+                console.log(m);
+            function y(){
+                document.querySelector("#c").innerHTML=`<option value="">请选择</option>`
+                for(var i in m){
+                if(w[i].value==m){
+                    var e=w[i].children
+                    for(var j in e){
+                        document.querySelector("#c").innerHTML+=`<option value=${e[j].value}>${e[j].text}</option>`
+                    }
+                }
+            }
+            }
+            y()
+        }
+        }
+    }
+</script>
+</html>

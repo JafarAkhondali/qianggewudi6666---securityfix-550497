@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border-collapse: collapse;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <p>账号:<input type="text" id="qq"></p>
+    <p>密码:<input type="password" id="ww"></p>
+    <button id="tt">登录</button>
+</body>
+<script src="ajax1.js"></script>
+<script>
+    document.getElementById("tt").onclick=function(){
+    function hh(a){
+        console.log(a)
+        if(a==="ok"){
+                        alert("登陆成功")
+                    }else{
+                        alert("登录失败")
+                    }
+    }
+    ajax("post", "http://www.qhdlink-student.top/student/login.php","username="+document.getElementById("qq").value+""+"&userpwd="+document.getElementById("ww").value+""+"&userclass=70&type=4",hh)
+}
+    
+</script>
+</html>

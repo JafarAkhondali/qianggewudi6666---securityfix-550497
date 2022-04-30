@@ -1,0 +1,101 @@
+*{
+margin:0;
+padding:0;
+}
+.one{
+background:url("../img/bg9.gif");
+width:1898px;
+height:991px;
+margin:0 auto;
+}
+.two{
+background:url("../img/banner3.jpg");
+width:900px;
+height:200px;
+margin:0 auto;
+}
+.three{
+background:#90bcff;
+width:900px;
+height:30px;
+margin:0 auto;
+}
+.four{
+background:#d3e7ff;
+width:225px;
+height:710px;
+float:left;
+clear:left;
+margin:0 auto;
+text-align: center;
+}
+.five{
+background:#e9fbff;
+width:675px;
+height:710px;
+margin-left:225px;
+float:left
+clear: left;
+}
+.six{
+background:#90bcff;
+width:900px;
+height:25px;
+margin:0 auto;
+}
+.seven{
+width:900px;
+height:710px;
+margin:0 auto;
+}
+span{
+color:#990000;
+}
+ul li{
+margin:4px 34px;
+list-style-type:none;
+float:left;
+}
+a{
+color:#990000;
+font-size:20px;
+font-family:宋体;
+}
+.p1{
+	margin-top: 25px;
+}
+img:hover{
+	overflow: hidden;
+	transform: scale(1.2,1.2);
+}
+.p2{
+	margin-top: 5px;
+}
+.ww{
+	margin:20px 1px;
+}
+.qq{
+font-size:19px;
+font-family:宋体;
+}
+.six{
+	color:white;
+	font-size:18px;
+	font-family:宋体;
+	text-align: center;
+	font-weight: 500;
+}
+.ee a{
+	color:#003399;
+	font-size:28px;
+	font-weight: 600;
+	font-family:宋体;
+}
+.rr{
+	margin-top:35px;
+	font-family:宋体;
+	font-size:19px;
+}
+.ee{
+	padding-top:30px;
+}

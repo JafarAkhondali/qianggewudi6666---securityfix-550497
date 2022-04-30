@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style>
+td{border:1px solid pink;}
+</style>
+</head>
+<body>
+
+
+
+</body>
+<script>
+
+var x=0
+var y=0
+for(var i=0;i<=100;i++){
+	if(i%2==0){
+		x+=i
+	}
+	else{
+		y+=i
+	}
+}
+document.write(x);
+document.write("<br>")
+document.write(y);			     //奇偶累加
+
+
+document.write("<br>")
+
+
+for(var i=1;i<=16;i++){
+	document.write("*");
+		if(i%4==0){
+			document.write("<br>")
+		}
+}
+                   				 //4行4列
+
+function sum(n,m){
+for(var i=1;i<=n;i++){
+	for(var x=1;x<=m;x++){
+		document.write("*")
+	}
+	document.write("<br>")
+}
+}
+sum(5,10)					//双重for行列
+
+
+document.write("<table>")
+for(var i=1;i<=9;i++){
+	document.write("<tr>")
+	for(var x=1;x<=i;x++){
+		document.write("<td>"+i+"*"+x+"="+i*x+"</td>")
+	}
+	document.write("</tr>")
+}	
+for(var i=9;i>=1;i--){
+	document.write("<tr>");
+	for(var x=1;x<=i;x++){
+		document.write("<td>"+i+"*"+x+"="+i*x+"</td>")
+	}
+	document.write("</tr>")
+}
+document.write("</table>")			 //九九乘法表
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

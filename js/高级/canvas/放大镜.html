@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="400" height="400"></canvas>
+    <img src="4.jpg" alt="">
+</body>
+<script>
+    var a=document.querySelector("canvas")
+    var b=a.getContext("2d")
+    var c=document.querySelector("img")
+    c.onmousemove=function(e){
+        var x=e.offsetX-50
+        var y=e.offsetY-50
+        b.clearRect(0,0,400,400)
+        b.drawImage(c,x,y,100,100,0,0,400,400)
+    }
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            text-align: center;
+        }
+        p{
+            background: green;
+        }
+        li{
+            background: pink;
+        }
+        ul{
+            display: none;
+        }
+        .qq{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="qq">
+        <p>1</p>
+        <ul class="qq">
+            <li>q</li>
+            <li>q</li>
+            <li>q</li>
+        </ul>
+        <p>2</p>
+        <ul>
+            <li>w</li>
+            <li>w</li>
+            <li>w</li>
+        </ul>
+        <p>3</p>
+        <ul>
+            <li>e</li>
+            <li>e</li>
+            <li>e</li>
+        </ul>
+        <p>4</p>
+        <ul>
+            <li>r</li>
+            <li>r</li>
+            <li>r</li>
+        </ul>
+</div>  
+</body>
+<script src="../jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="封装.js"></script>
+<script>
+    $(function(){
+        $("#qq").a("p").css("border","10px solid pink")
+    })
+</script>
+</html>

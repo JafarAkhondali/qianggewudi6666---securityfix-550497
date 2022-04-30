@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #qq{
+            display: flex;
+        }
+        #qq div{
+            margin-right: 20px;
+            background: none;
+        }
+        #ww{
+            display: flex;
+        }
+        #ww div{
+            margin-right: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="qq">
+        <div style="background: pink;">1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div id="ww">
+        <div style="display: block;">q</div>
+        <div>w</div>
+        <div>e</div>
+    </div>
+</body>
+<script src="jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script>
+    $(function(){
+        $("#qq").on("mouseenter","div",function(){
+            $("#ww").children().eq($(this).index()).stop().fadeIn().siblings().stop().hide()
+        })
+        $("#qq").on("mouseenter","div",function(){
+            $("#qq").children().eq($(this).index()).css("background","pink").siblings().css("background","none")
+        })
+    })
+</script>
+</html>

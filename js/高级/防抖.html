@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+</body>
+<script>
+    function n(fn,time){
+        var x=null;
+        return function(){
+            if(x!==null){
+                clearTimeout(x)
+            }
+            x=setTimeout(fn,time)
+        }
+    }
+    function m(){
+        console.log(Math.random())
+    }   
+    document.querySelector("button").onclick=n(m,1000)
+</script>
+</html>

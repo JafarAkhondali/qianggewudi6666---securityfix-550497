@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>登录</button>
+</body>
+<script>
+    document.querySelector("button").onclick=function(){
+        var a = new XMLHttpRequest()
+        var qq=document.querySelector("input").value
+        a.open("get", `https://mock.mengxuegu.com/mock/6141aa4b21805563ee1031d6/exam/login?name=${qq}`)
+        console.log(`name=${qq}`)
+        a.setRequestHeader("content-type", "application/x-www-form-urlencoded")
+        a.send()
+        a.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                var aa=JSON.parse(a.responseText)
+                console.log(aa)
+                console.log(aa.data.name)
+                alert(`欢迎${aa.data.name}登录`)
+                }
+        }
+}
+</script>
+</html>

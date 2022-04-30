@@ -1,0 +1,233 @@
+html{
+    letter-spacing: 0.4px;
+}
+.Left{
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    padding: 24px;
+}
+.leftdiv{
+    padding: 0;
+}
+.none{
+    display: none;
+}
+.leftdiv li{
+    float: left;
+    font-weight: 700;
+    font-size: 1.6rem;
+    height: 45px;
+}
+.leftdiv li a{
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000;
+    line-height: 36px;
+}
+.Right{
+    float: right;
+    width: 70%;
+}
+.Right2{
+    float: right;
+    width: 100%;
+}
+.flrigh{
+    float: right;
+}
+.leftdiv img{
+    width: 36px;
+    height: 36px;
+    opacity: 0.8;
+}
+.flrigh img{
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+}
+.Left2{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.Left3 p{
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+.Left2 p{
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -104px;
+    margin-top: -18px;
+    height: 50px;
+}
+
+
+/* 右浮动 */
+.row{
+    margin: 0;
+}
+.ad>div{
+    background-image: url(../imgs/lijiahui/hero.jpg);
+    text-align: center;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: -6;
+}
+.ad>div::before{
+    background-image: linear-gradient(
+        -180deg
+        , rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 81%);
+            content: '';
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            z-index: -5;
+}
+.ad p{
+    color: #C48D69;
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+.adimg img{
+    width: 72px;
+    margin-bottom: 24px;
+}
+.adimg{
+    margin-top: 30px;
+}
+.adimg+div{
+    margin-bottom: 30px;
+}
+
+/* map */
+.map{
+    background: url(../imgs/lijiahui/map.jpg) no-repeat center;
+}
+.map>div{
+    text-align: center;
+    padding: 48px 0;
+}
+.map a{
+    display: inline-block;
+    padding: 12px 24px;
+    background: #C48D69;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 24px;
+}
+
+/* 臻选咖啡 */
+.three{
+    background: #231F20;
+    text-align: center;
+    padding: 48px 0;
+}
+.three i{
+    color: #C48D69;
+    font-weight: 700;
+}
+.h3{
+    margin-top: 4px;
+}
+.three p{
+    color: #C48D69;
+}
+.round{
+    display: inline-block;
+    border-radius: 73px;
+    overflow: hidden;
+}
+.round img{
+    width: 146px;
+    height: 146px;
+    display: block;
+}
+.three li{
+    float: left;
+    margin: 0 20px;
+}
+.three ul{
+    width: 558px;
+    margin: 0 auto;
+    text-align: center;
+}
+.three ul p{
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+
+/* 背景图 */
+.back{
+    width: 100%;
+}
+.back img{
+    width: 100%;
+}
+
+
+.cente{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.con1 img{
+    width: 100%;
+    margin-left: -48px;
+}
+.con2 img{
+    width: 100%;
+}
+.con3 img{
+    width: 100%;
+    margin-left: -48px;
+}
+.con4 img{
+    width: 100%;
+}
+.con2 p{
+    font-weight: 700;
+}
+.con3 p{
+    font-weight: 700;
+}
+.con4 p{
+    font-weight: 700;
+}
+.con44{
+    padding-top: 30px;
+}
+.con5{
+    padding-bottom: 30px;
+}
+
+
+.foot{
+    width: 100%;
+    position: relative;
+}
+.foot img:first{
+    width: 100%;
+    height: auto;
+}
+.foot img:last-child{
+    width: 28%;
+    position: absolute;
+    bottom: 20%;
+    left: 13%;
+}

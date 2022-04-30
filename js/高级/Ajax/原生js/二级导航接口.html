@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ww"></ul>
+</body>
+<script>
+    var a = new XMLHttpRequest();
+    a.open("get", "http://www.qhdlink-student.top/test/nav.php");
+    // a.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+    a.send();
+    a.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            var aa = JSON.parse(this.responseText)
+            for(var j in aa){
+                var qq=document.createElement("li")
+                qq.innerHTML="<a href='"+aa[j].addr_m+"'>"+aa[j].title_m+"</a>"
+                if(aa[j].type==="1"){
+                    var ww=document.createElement("ul")
+                    for(var k in aa[j].children_m){
+                        var ee=document.createElement("li")
+                        ee.innerHTML="<a href='"+aa[j].children_m[k].addr_c+"'>"+aa[j].children_m[k].title_c+"</a>"
+                        ww.appendChild(ee)
+                    }
+                    qq.appendChild(ww)
+                }
+            document.getElementById("ww").appendChild(qq)
+}
+}
+}
+</script>
+</html>

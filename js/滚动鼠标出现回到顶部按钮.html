@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #qq{
+        width: 100px;
+        height: 100px;
+        background: pink;
+        position: fixed;
+        right: 20px;
+        bottom: 50px;
+        display: none;
+    }
+    #ww{
+        height: 2000px;
+        background: green;
+    }
+</style>
+<body>
+    <div id="qq"></div>
+    <div id="ww"></div>
+</body>
+<script>
+    window.onscroll=function(){
+        document.documentElement.scrollTop>500?document.getElementById("qq").style.display="block":document.getElementById("qq").style.display="none"
+    }
+    document.getElementById("qq").onclick=function(){
+    document.documentElement.scrollTop=0
+    }
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-decoration: none;
+        }
+        .qqq{
+            margin-left: 150px;
+        }
+        .qq{
+            float: left;
+            margin-right: 20px;
+        }
+        .ww{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="qqq" id="qq">
+        <li class="qq">1
+            <ul class="ww">
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+            </ul>
+        </li>
+        <li class="qq">1
+            <ul class="ww">
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+            </ul>
+        </li>
+        <li class="qq">1
+            <ul class="ww">
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+            </ul>
+        </li>
+        <li class="qq">1
+            <ul class="ww">
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+            </ul>
+        </li>
+        <li class="qq">1
+            <ul class="ww">
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script src="jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script>
+    $(".qq").hover(function(){
+        if($(this).children().css("display")==="none"){
+            $(this).children().show(100)
+        }
+        else{
+            $(this).children().hide(100)
+        }
+    })
+</script>
+</html>

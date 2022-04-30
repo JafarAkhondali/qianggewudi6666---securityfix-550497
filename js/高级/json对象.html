@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td,li{
+            border-collapse: collapse;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <table id="qq"></table>
+    <ul id="ww"></ul>
+    <table id="ee"></table>
+</body>
+<script>
+    var a=[{"aa":"aaa","bb":"bbb","cc":"ccc"},{"qq":"qqq","ww":"www","ee":"eee"},{"zz":"zzz","xx":"xxx","cc":"ccc"}]
+    for(var i in a){
+        var zz=document.createElement("tr")
+        for(var j in a[i]){
+            var zzz=document.createElement("td")
+            zzz.innerHTML=a[i][j]
+            zz.appendChild(zzz)
+        }
+        document.getElementById("qq").appendChild(zz)
+    }
+
+    var aa=[
+    {
+        "id_m": "1",
+        "title_m": "百度",
+        "addr_m": "http://www.baidu.com",
+        "type": "0",
+        "children_m": [
+            {
+                "title_c": "新闻",
+                "addr_c": "http://news.qq.com/"
+            },
+            {
+                "title_c": "财经",
+                "addr_c": "http://finance.qq.com/"
+            },
+            {
+                "title_c": "娱乐",
+                "addr_c": "http://ent.qq.com/"
+            }
+        ]
+    },
+    {
+        "id_m": "2",
+        "title_m": "腾讯",
+        "addr_m": "http://www.qq.com",
+        "type": "1",
+        "children_m": [
+            {
+                "title_c": "新闻",
+                "addr_c": "http://news.qq.com/"
+            },
+            {
+                "title_c": "财经",
+                "addr_c": "http://finance.qq.com/"
+            },
+            {
+                "title_c": "娱乐",
+                "addr_c": "http://ent.qq.com/"
+            }
+        ]
+    },
+    {
+        "id_m": "3",
+        "title_m": "网易",
+        "addr_m": "http://www.163.com/",
+        "type": "1",
+        "children_m": [
+            {
+                "title_c": "新闻",
+                "addr_c": "http://news.163.com/"
+            },
+            {
+                "title_c": "财经",
+                "addr_c": "http://money.163.com/"
+            },
+            {
+                "title_c": "娱乐",
+                "addr_c": "http://ent.163.com/"
+            }
+        ]
+    }
+]
+
+for(var j in aa){
+    var qq=document.createElement("li")
+    qq.innerHTML="<a href='"+aa[j].addr_m+"'>"+aa[j].title_m+"</a>"
+    var ww=document.createElement("ul")
+    for(var k in aa[j].children_m){
+        var ee=document.createElement("li")
+        ee.innerHTML="<a href='"+aa[j].children_m[k].addr_c+"'>"+aa[j].children_m[k].title_c+"</a>"
+        ww.appendChild(ee)
+    }
+    qq.appendChild(ww)
+    document.getElementById("ww").appendChild(qq)
+}
+
+var aaa={
+    "0": {
+        "id_coach": "10",
+        "name_coach": "杨肖",
+        "dage_coach": "02/01/2012",
+        "tage_coach": "04/08/2016",
+        "type_coach": "项目主管",
+        "honor_coach": "讲师",
+        "evaluate_coach": "5",
+        "path_coach": "网页/js/高级轮播图/1.jpg"
+    },
+    "1": {
+        "id_coach": "9",
+        "name_coach": "郑云鹏",
+        "dage_coach": "02/09/2010",
+        "tage_coach": "03/10/2016",
+        "type_coach": "项目主管",
+        "honor_coach": "讲师",
+        "evaluate_coach": "5",
+        "path_coach": "网页/js/高级轮播图/2.jpg"
+    },
+    "2": {
+        "id_coach": "5",
+        "name_coach": "刘晶晶",
+        "dage_coach": "01/03/2005",
+        "tage_coach": "01/01/2013",
+        "type_coach": "日企CTO",
+        "honor_coach": "讲师",
+        "evaluate_coach": "5",
+        "path_coach": "网页/js/高级轮播图/3.jpg"
+    },
+    "3": {
+        "id_coach": "3",
+        "name_coach": "任民",
+        "dage_coach": "01/04/2000",
+        "tage_coach": "01/02/2011",
+        "type_coach": "电商创始人",
+        "honor_coach": "讲师",
+        "evaluate_coach": "5",
+        "path_coach": "网页/js/高级轮播图/1.jpg"
+    }
+}
+for(var n in aaa){
+        var ii=document.createElement("tr")
+        for(var m in aaa[n]){
+            var iii=document.createElement("td")
+            if(m==="path_coach"){
+                iii.innerHTML="<img src='"+aaa[n][m]+"'>"
+            }
+            else{
+                iii.innerHTML=aaa[n][m]
+            }
+            ii.appendChild(iii)
+        }
+        document.getElementById("ee").appendChild(ii)
+    }
+</script>
+</html>

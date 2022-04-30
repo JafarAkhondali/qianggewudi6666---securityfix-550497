@@ -1,0 +1,69 @@
+#qq{
+    width: 250px;
+    height: 100%;
+    background-color: pink;
+    position: fixed;
+    left: 0;
+}
+#qq ul{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 80px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#ww{
+    margin-left: 250px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .my-bullet-active{
+background: blue;
+opacity: 1;
+}
+td{
+    border-collapse: collapse;
+    border: 1px solid pink;
+    width: 150px;
+    height: 100px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.aa{
+    background-color: green;
+}
+#b,#c,#d{
+    display: none;
+}

@@ -1,0 +1,26 @@
+$(function(){
+    $(".yyy").click(function(){
+        $(window).scrollTop(0)
+    })
+    $(".ww3").click(function(){
+        $(".www").toggle()
+    })
+    $(".eee").click(function(){
+        $(".rr1").toggle()
+    })
+    $(".ss1").on("mouseenter","span",function(){
+        $(".ss2").children().eq($(this).index()).stop().fadeIn().siblings().stop().hide()
+    })
+    $(".ss1").on("mouseenter","span",function(){
+        $(".ss1").children().eq($(this).index()).addClass("sss").siblings().removeClass("sss")
+    })
+    $("#qq").on("mouseenter","span",function(){
+        $("#ww").children().eq($(this).index()).stop().fadeIn().siblings().stop().hide()
+    })
+    $("#qq").on("mouseenter","span",function(){
+        $("#qq").children().eq($(this).index()).addClass("wwww").siblings().removeClass("wwww")
+    })
+    $("#ww").on("mouseover","p",function(){
+        $(this).next().show().siblings("div").hide()
+    })
+})

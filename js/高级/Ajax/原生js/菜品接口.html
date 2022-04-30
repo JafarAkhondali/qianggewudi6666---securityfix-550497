@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border-collapse: collapse;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="ee"></table>
+</body>
+<script>
+    var a = new XMLHttpRequest();
+    a.open("post", "http://www.qhdlink-student.top/student/coacha.php");
+    a.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+    a.send("username=zyp&userpwd=123456&userclass=70&type=4");
+    a.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            var aaa = JSON.parse(this.responseText);
+            console.log(aaa)
+            for(var n in aaa){
+                console.log(n)
+                var ii=document.createElement("tr")
+                for(var m in aaa[n]){
+                    console.log(m)
+                    var iii=document.createElement("td")
+                    if(m==="path_coach"){
+                        iii.innerHTML="<img src='"+'http://www.qhdlink-student.top/'+aaa[n][m]+"'>"
+                    }
+                    else{
+                        iii.innerHTML=aaa[n][m]
+                    }
+                    ii.appendChild(iii)
+                }
+                document.getElementById("ee").appendChild(ii)
+            }
+}
+}
+</script>
+
+</html>

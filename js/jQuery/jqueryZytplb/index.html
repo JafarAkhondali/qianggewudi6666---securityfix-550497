@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery左右滑动切换特效</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<div class="bodyCon08"><!--列表-->
+	<div class="students">
+		
+		  <div id="four_flash">
+			<div class="flashBg">
+				<ul class="mobile">
+					<li>
+						<img src="img/t1.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t2.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t3.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t4.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t5.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+					<li>
+						<img src="img/t6.png" />
+						<dd>标题标题标题标题标题</dd>
+						<p>摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要</p>
+						<a href=""></a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="but_left"><img src="img/qianxleft.png" /></div>
+			<div class="but_right"><img src="img/qianxr.png" /></div>
+		  </div>
+		  
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+//学员
+var _index5=0;
+$(".but_right").click(function(){
+	_index5++;
+	var len=$("li").length;
+	if(_index5+5>len){
+		$("ul").stop().append($("ul").html());
+	}
+	$("ul").stop().animate({left:-_index5*326},1000);
+	});
+
+	
+$(".but_left").click(function(){
+	if(_index5==0){
+		$("ul").prepend($("ul").html());
+		$("ul").css("left","-1380px");
+		_index5=6
+	}
+	_index5--;
+	$("ul").stop().animate({left:-_index5*326},1000);
+	});
+</script>	
+
+</body>
+</html>

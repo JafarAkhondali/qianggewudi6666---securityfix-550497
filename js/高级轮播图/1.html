@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .banner{
+        width: 500px;
+        height: 300px;
+        margin: auto;
+        margin-top: 60px;
+        border: 1px solid palegreen;
+        /* 设置为相对定位 */
+        position: relative;
+        /* 溢出的部分藏起来 */
+        overflow: hidden; 
+        text-align: center;
+        /* line-height: 300px; */
+    }
+                    .banner .banner_pic .pic{
+                        /* p平时是藏起来的，看不到的 */
+                        display: none;
+                    }
+                    .banner .banner_pic current{
+                        /* 图片显示出来 */
+                        display: block;
+                    }
+    .banner .banner_pic img{
+        width: 380px;
+        margin-top: 40px;
+    }
+    .banner ol{
+        /* 给ol一个位置    绝对定位 */
+        margin: auto;
+        position:absolute;
+        left: 210px;
+        top: 230px;
+    }
+    .banner ol li{
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+        list-style: none;
+        border-radius: 15px;
+    }
+                    .banner ol .but{
+                        border: 1px solid #eee;
+                    }
+                    .banner ol .current{
+                        background: #fe0048;
+                        border: 1px solid #fe0048;
+                    }
+    .banner .left{
+        width: 50px;
+        height: 50px;
+        background: aqua;
+        position: absolute;
+        left: 6px;
+        top: 130px;
+        cursor: pointer;
+    }
+    .banner .right{
+        width: 50px;
+        height: 50px;
+        background: aqua;
+        position: absolute;
+        right: 6px;
+        top: 130px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+        <div class="banner">
+            <!-- 图片部分 -->
+            <div id="banner_pic" class="banner_pic">
+                <div class="current"><img src="1.jpg" alt=""></div>
+                <div class="pic"><img src="2.jpg" alt=""></div>
+                <div class="pic"><img src="3.jpg" alt=""></div>
+                <div class="pic"><img src="4.jpg" alt=""></div>
+            </div>
+
+            <div id="left" class="left"></div>
+            <div id="right" class="right"></div>
+
+            <!-- 圆圈部分 -->
+            <!-- 使用无序列表实现 -->
+            <ol id="button">
+                <li class="current"></li>
+                <li class="but"></li>
+                <li class="but"></li>
+                <li class="but"></li>
+            </ol>
+        </div>
+</body>
+<script>
+    //对每张图片设置索引号
+                //记录图片的索引号
+                var current_index = 0 ;
+                // 获取所有的li
+                var button_li = document.getElementById("button").children
+                // 获取所有的图片
+                var pic_div = document.getElementById("banner_pic").children
+                //设置定时器(每1.5秒钟调用一次)
+                var timer = window.setInterval(autoChange,1000)
+                //图片的自动播放：
+                function autoChange(){
+                    current_index++
+                    for(var i = 0 ; i < pic_div.length ; i++ ){//通过图片的个数进行循环，也可以通过获取按钮的个数进行循环，因为图片和按钮是一一对应的
+                        if(i == current_index){
+                            // 按钮的变化
+                            button_li[i].className="current";
+                            //图片的变化
+                            pic_div[i].className="current";
+                        }else{
+                             // 按钮的变化
+                             button_li[i].className="but";
+                            //图片的变化
+                            pic_div[i].className="pic";
+                        }
+                        //重头再来
+                        if(current_index==pic_div.length){
+                            current_index=0;
+                            i=-1;
+                        }
+                    }
+                }
+            // 鼠标移入小圆圈的时候转换图片的功能
+            for(var i = 0 ; i < button_li.length ; i++ ){
+                button_li[i].onmouseover = function(){
+                    //清除图片轮播:
+                    if(timer){//定时器存在时
+                        clearInterval(timer);
+                    }
+                    //移入显示相对应图片
+                    for(var j = 0 ; j < pic_div.length ; j++ ){
+                        if(button_li[j] == this){//this指的是button_li[i];---------------可以转换条件  i==j
+                            current_index = j ;
+                            //找到索引，让图片和按钮都变化
+                            // 按钮的变化
+                            button_li[j].className="current";
+                            //图片的变化
+                            pic_div[j].className="current";
+                        }else{
+                             // 按钮的变化
+                             button_li[j].className="but";
+                            //图片的变化
+                            pic_div[j].className="pic";
+                        }
+                }
+            }
+            //鼠标移出的事件：(恢复定时器的自动播放)
+            button_li[i].onmouseout= function(){
+                timer = setInterval(autoChange,1000);
+            }
+        }
+        //点击切换图片的效果
+        var left = document.getElementById('left');
+        var right = document.getElementById('right');
+        left.onclick = function(){
+             //清除图片轮播:
+             if(timer){//定时器存在时
+                  clearInterval(timer);
+               }
+            var i=current_index
+            if(current_index==0){
+                current_index = pic_div.length;
+                i = current_index;
+            }
+            i--;
+            current_index--;
+            swap(i);
+        }
+        right.onclick = function(){
+             //清除图片轮播:
+             if(timer){//定时器存在时
+                  clearInterval(timer);
+               }
+            var i=current_index
+            if(current_index==pic_div.length-1){
+                current_index = -1;
+                i = current_index;
+            }
+            i++;
+            current_index++;
+            swap(i);
+        }
+        function swap(i){
+            for(var k =0 ; k < pic_div.length ; k++){
+                if(k==i){
+                     // 按钮的变化
+                     button_li[k].className="current";
+                     //图片的变化
+                     pic_div[k].className="current";
+                }else{
+                     // 按钮的变化
+                    button_li[k].className="but";
+                     //图片的变化
+                    pic_div[k].className="pic";                   
+                }
+            }
+            timer = setInterval(autoChange,1000);
+        }
+</script>
+</html>

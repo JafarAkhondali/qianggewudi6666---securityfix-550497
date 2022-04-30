@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <p>账号:<input type="text" id="qq"></p>
+    <p>密码:<input type="password" id="ww"></p>
+    <button id="tt">登录</button>
+</body>
+<script>
+    document.getElementById("tt").onclick=function(){
+        var a = new XMLHttpRequest()
+        a.open("post", "http://www.qhdlink-student.top/student/login.php")
+        a.setRequestHeader("content-type", "application/x-www-form-urlencoded")
+        var qq=document.getElementById("qq").value
+        var ww=document.getElementById("ww").value
+        a.send("username="+qq+"&userpwd="+ww+"&userclass=70&type=4")
+        a.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                var aa=this.responseText
+                console.log(aa)
+                    if(aa==="ok"){
+                        alert("登陆成功")
+                        var d=new Date()
+                        d.setTime(d.getTime()+24*60*60*1000)
+                        document.cookie="ok;expires="+d.toLocaleString()
+                        location.href="登录2.html"
+                    }else{
+                        alert("登录失败")
+                    }
+                }
+        }
+}
+</script>
+</html>

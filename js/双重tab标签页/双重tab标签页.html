@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            display: inline-block;
+            margin-right: 50px;
+            font-size: 24px;
+        }
+        #ww>*{
+            display: none;
+        }
+        #ww :first-child{
+            display: block;
+        }
+        #qq>*{
+            background: none;
+        }
+        #qq :first-child{
+            background: pink;
+        }
+        #ss>*{
+            display: none;
+        }
+        #ss :first-child{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="ww">
+            <div>
+                <div id="ss">
+                    <img src="2.jpg" alt="">
+                    <img src="3.jpg" alt="">
+                    <img src="4.jpg" alt="">
+                </div>
+                <div id="aa">
+                    <img src="2.jpg" alt="" data-w="0">
+                    <img src="3.jpg" alt="" data-w="1">
+                    <img src="4.jpg" alt="" data-w="2">
+                </div>
+            </div>
+            <div>
+                <div id="xx">
+                    <img src="4.jpg" alt="">
+                    <img src="3.jpg" alt="">
+                    <img src="2.jpg" alt="">
+                </div>
+                <div id="zz">
+                    <img src="4.jpg" alt="" data-e="0">
+                    <img src="3.jpg" alt="" data-e="1">
+                    <img src="2.jpg" alt="" data-e="2">
+                </div>
+            </div>
+            <div>
+                <div id="vv">
+                    <img src="2.jpg" alt="">
+                    <img src="3.jpg" alt="">
+                    <img src="4.jpg" alt="">
+                </div>
+                <div id="cc">
+                    <img src="2.jpg" alt="" data-r="0">
+                    <img src="3.jpg" alt="" data-r="1">
+                    <img src="4.jpg" alt="" data-r="2">
+                </div>
+            </div>
+        </div>
+        <div id="qq">
+            <a href="" data-q="0">1</a>
+            <a href="" data-q="1">2</a>
+            <a href="" data-q="2">3</a>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("qq").onmouseover=function(e){
+        if(e.target.nodeName==="A"){
+            var a=e.target.getAttribute("data-q")
+            var b=document.getElementById("ww").children
+            var c=document.getElementById("qq").children
+            for(var i=0;i<b.length;i++){
+                b[i].style.display="none"
+            }
+            b[a].style.display="block"
+            for(var i=0;i<c.length;i++){
+                c[i].style.background="none"
+            }
+            c[a].style.background="pink"
+        }
+    }
+    document.getElementById("aa").onmouseover=function(e){
+        if(e.target.nodeName==="IMG"){
+            var a=e.target.getAttribute("data-w")
+            var b=document.getElementById("ss").children
+            for(var i=0;i<b.length;i++){
+                b[i].style.display="none"
+            }
+            b[a].style.display="block"
+        }
+    }
+    document.getElementById("zz").onmouseover=function(e){
+        if(e.target.nodeName==="IMG"){
+            var a=e.target.getAttribute("data-e")
+            var b=document.getElementById("xx").children
+            for(var i=0;i<b.length;i++){
+                b[i].style.display="none"
+            }
+            b[a].style.display="block"
+        }
+    }
+    document.getElementById("cc").onmouseover=function(e){
+        if(e.target.nodeName==="IMG"){
+            var a=e.target.getAttribute("data-r")
+            var b=document.getElementById("vv").children
+            for(var i=0;i<b.length;i++){
+                b[i].style.display="none"
+            }
+            b[a].style.display="block"
+        }
+    }
+</script>
+</html>

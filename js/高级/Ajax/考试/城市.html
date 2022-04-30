@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table></table>
+</body>
+<script>
+    var a=new XMLHttpRequest()
+    a.open("post","https://mock.mengxuegu.com/mock/6141aa4b21805563ee1031d6/exam/address")
+    a.setRequestHeader("content-type","application/x-www-form-urlencoded")
+    a.send()
+    a.onreadystatechange=function(){
+        if(a.readyState==4&&a.status==200){
+            var aa=JSON.parse(a.responseText)
+            console.log(aa)
+            var aaa=aa.data.projects
+            for(var i in aaa){
+                console.log(i)
+                var tr=document.createElement("tr")
+                tr.innerHTML=`<td>${aaa[i].address}</td><td>${aaa[i].email}</td><td>${aaa[i].number}</td>`
+                document.querySelector("table").appendChild(tr)
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,47 @@
+<view class="searchBox">
+ <input class="txt" type="text" placeholder="发现音乐发现生活中的美好" ></input>
+ <view class="btn">
+  <image src="/images/搜索按钮.png"></image>
+ </view>
+</view>
+<view class="main clearfix">
+  <view class="top">
+    <view class="tit_l">歌手推荐</view>
+    <view class="tit_r">更多</view>
+  </view>
+  <block wx:for="{{imgdata}}" wx:key="this">
+    <view class="picitem">
+    <image src="{{item.pic}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+  </block>
+</view>
+<view class="findbox">
+  <view class="findtext">发现精彩小程序</view>
+  <view class="finditem">
+    <image src="/images/QQweixin_03a.png"></image>
+    <view class="txt">听歌识曲</view>
+  </view>
+  <view class="finditem">
+    <image src="/images/QQweixin_05a.png"></image>
+    <view class="txt">歌词海报</view>
+  </view>
+  <view class="finditem">
+    <image src="/images/QQweixin_07_a.png"></image>
+    <view class="txt">睡眠电台</view>
+  </view>
+</view>
+
+
+<view class="main clearfix">
+  <view class="top">
+    <view class="tit_l">歌单推荐</view>
+    <view class="tit_r">更多</view>
+  </view>
+  <block wx:for="{{musicdata}}" wx:key="this">
+    <view class="picitem">
+    <image src="{{item.pic}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+  </block>
+</view>

@@ -1,0 +1,39 @@
+.qq{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 70%;
+}
+.ww{
+    margin:0 auto;
+    border-bottom: 1px solid #ccc;
+    width: 70%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.ww img{
+    margin: 0 auto;
+    display: block;
+}
+.ee{
+    margin-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+}
+.ee1{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.rr{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#qq{
+    float: right;
+   cursor: pointer;
+}

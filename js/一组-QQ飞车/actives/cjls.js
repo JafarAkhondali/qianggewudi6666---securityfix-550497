@@ -1,0 +1,10 @@
+$(function(){
+    $(window).scroll(function(){
+        if($(this).scrollTop()>=900){
+            $(".ee1").css({"position":"fixed","top":"0","z-index":"9999"})
+        }
+        else{
+            $(".ee1").css({"position":"absolute","top":"900px"})
+        }
+    })
+})

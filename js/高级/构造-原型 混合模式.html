@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function qg(a,b){
+        this.name=a
+        this.age=b
+    }
+    qg.prototype.hh=function(){
+        alert(this.name)
+    }
+    var x=new qg("A","B")
+    x.hh()
+</script>
+</html>

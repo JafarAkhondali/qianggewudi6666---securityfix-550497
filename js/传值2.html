@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div id="qq"></div>
+	<button id="ww"><</button>
+</body>
+<script>
+	var n=decodeURI(location.search).slice(1);
+	var a=n.split("&");
+	var c=[];
+	var d=[];
+	for(var i in a){
+	var b=a[i].split(":");
+	c.push(b[0]);
+	d.push(b[1]);
+	}
+	document.getElementById("qq").innerHTML=c+"<br>"+d;
+
+	
+	document.getElementById("ww").onclick=function(){
+		history.back();
+	}
+</script>
+</html>

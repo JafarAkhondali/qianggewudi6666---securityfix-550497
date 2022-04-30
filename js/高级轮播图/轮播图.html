@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #qqq{
+            position: absolute;
+            top:0;
+            left: 200px;
+        }
+        #qq{
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+            display: flex;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+        }
+        #ww{
+            position: relative;
+            top:-30px;
+            left: 100px;
+            display: flex;
+        }
+        #ww>*{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background: pink;
+        }
+        #ww :first-child{
+            background: blue;
+        }
+        #ee1{
+            position: relative;
+            top:-120px;
+            background: transparent;
+        }
+        #ee2{
+            position: relative;
+            top:-120px;
+            left:247.5px;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="qqq">
+        <div id="qq"><img src="1.jpg" alt="" data-q="0"><img src="2.jpg" alt="" data-q="1"><img src="3.jpg" alt="" data-q="2"><img src="4.jpg" alt="" data-q="3"></div>
+        <div id="ww">
+            <i data-q="0"></i>
+            <i data-q="1"></i>
+            <i data-q="2"></i>
+            <i data-q="3"></i>
+        </div>
+        <!-- <div id="ee">
+            <button id="ee1"><</button>
+            <button id="ee2">></button>
+        </div> -->
+    </div>
+</body>
+<script>
+    var q=document.getElementById("qq")
+    function x(){
+        q.scrollLeft+=100
+        if(q.scrollLeft>=300){
+            q.scrollLeft=0
+            q.appendChild(q.firstElementChild)
+            clearInterval(a)
+            n()
+        }
+    }
+    var w=document.getElementById("ww")
+    var b=0
+    function n(){
+        aa=setTimeout(function(){
+                a=setInterval(x,100) 
+                b>=3?b=0:b++
+                for(var i=0;i<w.children.length;i++){
+                    w.children[i].style.background="pink"
+                }
+                w.children[b].style.background="blue"
+            },1000)
+    }
+    n()
+    w.onmouseover=function(e){
+        if(e.target.nodeName==="I"){
+            clearInterval(a)           //清除自动轮播的计时器
+            clearTimeout(aa)           //清除图片的延迟移动 
+            var z=e.target.getAttribute("data-q")
+            b=z
+            for(var i=0;i<w.children.length;i++){
+                    w.children[i].style.background="pink"
+                }
+                w.children[b].style.background="blue"
+            var x=q.children
+            for(var i=0;i<x.length;i++){
+                if(x[0].getAttribute("data-q")!==z){
+                    q.appendChild(x[0])
+                }
+            }
+           n()
+        }
+    }
+</script>
+</html>

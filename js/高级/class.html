@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class hh{
+        constructor(a,b){
+            this.name=a
+            this.age=b
+        }
+        x(){alert(1)}
+        y(){alert(2)}
+        get n(){
+            console.log("n");
+        }
+        set n(a){
+            console.log(a);
+        }
+        static aa(){
+            alert(1)
+        }
+    }
+    let a=new hh("tom",20)
+    console.log(a);
+    // a.x()
+    // a.y()
+    a.n;
+    a.n=10
+    hh.aa()
+
+    //继承
+    class hh1 extends hh{
+        constructor(a,b,c){
+            super(a,b)
+            this.num=c
+        }
+    }
+    let b=new hh1("lily",18,1)
+    console.log(b);
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+</body>
+<script>
+    var a=new XMLHttpRequest()
+    a.open("post","https://mock.mengxuegu.com/mock/6141aa4b21805563ee1031d6/exam/slidenav")
+    a.setRequestHeader("content-type","application/x-www-form-urlencoded")
+    a.send()
+    a.onreadystatechange=function(){
+        if(a.readyState==4&&a.status==200){
+            var aa=JSON.parse(a.responseText)
+            console.log(aa)
+            var aaa=aa.data
+            for(var i in aaa){
+                console.log(i)
+                var ww=document.querySelector("ul")
+                ww.innerHTML+=`<li>${aaa[i].firstNav}</li>`
+                for(var j in aaa[i].secondNav){
+                    console.log(aaa[i].secondNav[j].name)
+                    var ul=document.createElement("ul")
+                    ul.innerHTML=`<li>${aaa[i].secondNav[j].name}</li>`
+                    ww.appendChild(ul)
+                }
+                } 
+            }
+        }
+</script>
+</html>

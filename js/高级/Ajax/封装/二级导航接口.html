@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border-collapse: collapse;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ww"></ul>
+</body>
+<script src="ajax.js"></script>
+<script>
+    function hh(aa){
+        for(var j in aa){
+                var qq=document.createElement("li")
+                qq.innerHTML="<a href='"+aa[j].addr_m+"'>"+aa[j].title_m+"</a>"
+                var ww=document.createElement("ul")
+                if(aa[j].type==="1"){
+                    for(var k in aa[j].children_m){
+                        var ee=document.createElement("li")
+                        ee.innerHTML="<a href='"+aa[j].children_m[k].addr_c+"'>"+aa[j].children_m[k].title_c+"</a>"
+                        ww.appendChild(ee)
+                    }
+                }
+            qq.appendChild(ww)
+            document.getElementById("ww").appendChild(qq)
+}
+    }
+    ajax("get", "http://www.qhdlink-student.top/test/nav.php","username=zyp&userpwd=123456&userclass=70&type=4",hh)
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button id="qq">开始</button>
+    <button id="ww">结束</button>
+    <div></div>
+</body>
+<script src="jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script>
+    $(function(){
+        function x(){
+            $("div").animate({"left":"300"},1000).animate({"top":"300"},1000).animate({"left":"0"},1000).animate({"top":"0"},1000,function(){
+                x()
+            })
+        }
+        $("#qq").click(function(){
+            x()
+        })
+        $("#ww").click(function(){
+            $("div").stop(true)
+        })
+    })
+</script>
+</html>

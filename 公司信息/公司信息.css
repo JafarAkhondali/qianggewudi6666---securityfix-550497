@@ -1,0 +1,122 @@
+.two{
+width:1000px;
+height:800px;
+margin:0 auto;
+}
+form{
+font-family:ËÎÌו;
+color:#969696;
+width:1000px;
+height:750px;
+border:1px solid #ccc;
+}
+.one input{
+color:white;
+width:250px;
+height:30px;
+margin:0 auto;
+background:#e43f43;
+border:0;
+}
+p{
+padding-left:20px;
+margin-bottom:10px;
+margin-top:10px;
+}
+.tt{
+font-size:12px;
+}
+.ff{
+color:#055997;
+font-size:12px;
+position:relative;
+bottom:2px;
+}
+.ee{
+color:#055997;
+font-size:12px;
+}
+select{
+color:#969696;
+font-family:ËÎÌו;
+font-size:14px;
+}
+.ss{
+color:black;
+font-size:10px;
+position:relative;
+bottom:2px;
+}
+.one,.three,.four,.five,.six,.seven,.eight,.nine,.ten,.tt{
+width:1000px;
+height:70px;
+}
+.three input{
+margin-top:20px;
+width:225px;
+height:30px;
+}
+.four select{
+margin-right:10px;
+margin-top:20px;
+width:70px;
+height:30px;
+}
+.five input{
+margin-top:10px;
+width:225px;
+height:30px;
+}
+.six input{
+margin-top:10px;
+}
+.yy{
+padding-left:295px;
+}
+.seven input{
+width:225px;
+height:30px;
+}
+.eight select{
+width:90px;
+height:30px;
+}
+.nine select{
+width:310px;
+height:30px;
+}
+.ten select{
+width:150px;
+height:30px;
+}
+.oo input{
+width:180px;
+height:30px;
+}
+.one{
+margin-top:30px;
+padding-left:295px;
+}
+.gg{
+color:red;
+}
+.qq{
+position:relative;
+top:20px;
+left:10px;
+right:10px;
+}
+.ww{
+margin-top:20px;
+padding-left:295px;
+}
+.oo{
+position:relative;
+bottom:20px;
+}
+.aa{
+display:inline-block;
+width:280px;
+text-align:right;
+margin-right:15px;
+}

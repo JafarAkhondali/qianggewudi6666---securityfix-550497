@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+	text-align: center;
+}
+.bb{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.aa1{
+	flex-basis: 100%;
+	background: pink;
+}
+.aa2{
+	background: blue;
+	width: 100px;
+}
+.aa3{
+	background: yellow;
+}
+.aa4{
+	background: green;
+}
+.aa5{
+	background: orange;
+	flex-basis: 100%;
+}
+@media screen and (min-width: 320px){
+	.aa4,.aa2,.aa3{
+		flex-basis: 100%;
+	}
+}
+@media screen and (min-width: 640px){
+	.aa2{
+		flex-basis: 100%;
+	}
+	.aa3,.aa4{
+		flex-basis: 0;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+}
+@media screen and (min-width: 1200px){
+	.aa2,.aa3,.aa4{
+		flex-basis:0;
+		flex-grow: 1;
+	}
+}
+</style>
+	<title></title>
+</head>
+<body>
+	<div class="bb">
+	<div class="aa1">1</div>
+	<div class="aa2">2</div>
+	<div class="aa3">3</div>
+	<div class="aa4">4</div>
+	<div class="aa5">5</div>
+	</div>
+</body>
+</html>

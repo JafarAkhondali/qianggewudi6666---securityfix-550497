@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="province">
+        <option selected>请选择省份</option>
+    </select>
+    <select id="city">
+        <option selected>请选择城市</option>
+    </select>
+    <select id="county">
+        <option selected>请选择区（县）</option>
+    </select>
+</body>
+<script>
+    window.onload=()=>{
+        var pro=new Promise((resolve,reject)=>{
+            var ajax=new XMLHttpRequest()
+            ajax.open("get","https://mock.mengxuegu.com/mock/612498b7a7efc47d05b92506/example/cityData")
+            ajax.setRequestHeader("content-type","application/x-www-form-urlencoded")
+            ajax.send()
+            ajax.onreadystatechange=function(){
+                if(ajax.readyState==4){
+                    // return
+                    if(ajax.status==200){
+                        var data=ajax.responseText
+                        resolve(data)
+                    }
+                }
+            }
+        })
+        var d
+        pro.then(function(data){
+            d=JSON.parse(data).data
+            console.log(d)
+            for(var i in d){
+                document.getElementById("province").innerHTML+=`<option value="${d[i].value}">${d[i].text}</option>`
+            }
+        })
+        var proval
+        var cityobj
+        document.getElementById("province").onchange=(e)=>{
+            console.log(e.target.value)
+            proval=e.target.value
+            citychange()
+        }
+        function citychange(){
+            document.getElementById("city").innerHTML=`<option>请选择城市</option>`
+            document.getElementById("county").innerHTML=`<option>请选择县（区）</option>`
+            for(var i in d){
+                if(d[i].value==proval){
+                    for(var j in d[i].children){
+                        document.getElementById("city").innerHTML+=`<option value=${d[i].children[j].value}>${d[i].children[j].text}</option>`
+                    }
+                    cityobj=d[i].children
+                }
+            }
+        }
+        var cityval
+        document.getElementById("city").onchange=(e)=>{
+            console.log(e.target.value)
+            cityval=e.target.value
+            countychange()
+        }
+        function countychange(){
+            document.getElementById("county").innerHTML=`<option>请选择县（区）</option>`
+            for(var i in cityobj){
+                if(cityobj[i].value==cityval){
+                    for(var j in cityobj[i].children){
+                        document.getElementById("county").innerHTML+=`<option value=${cityobj[i].children[j].value}>${cityobj[i].children[j].text}</option>`
+                    }
+                }
+            }
+        }
+        // document.getElementById("county").onchange=(e)=>{
+        //     console.log(e.target.value)
+        // }
+    }
+</script>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid #000;
+            border-spacing: 0px;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 600px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/uuid/8.3.2/uuidv4.min.js"></script>
+</head>
+
+<body>
+    <p>
+        <input name="name">
+    </p>
+    <p>
+        <input name="phone">
+    </p>
+    <p>
+        <button>保存</button>
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>账号</th>
+                <th>电话</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="tab">
+        </tbody>
+    </table>
+
+    <script>
+        var oName = document.querySelector("[name='name']");
+        var oPhone = document.querySelector("[name='phone']");
+        var oBtn = document.querySelector("button");
+        var oTab = document.querySelector("#tab");
+
+
+        // var oList = [{ id: xxx, name: xxx, phone: xxx }, { id: xxx, name: xxx, phone: xxx }];
+        var oList = [];
+        //1.点击保存按钮,将当前的数据,保存到一个全局的数组
+        oBtn.onclick = function () {
+            //1,输入数据,做成一个对象,在又判断该数据是否已经在数组中,
+            var oUser = {
+                id: uuidv4().split("-")[0],
+                name: oName.value,
+                phone: oPhone.value
+            }
+            //2.如果不存在,就可以保存,如果存在就提示已注册
+            var isAdd = oList.some(function (item) {
+                return item.name == oUser.name;
+            })
+            if (isAdd) {
+                //存在
+                alert("该用户已注册!");
+                return;
+            }
+            oList.push(oUser);
+            alert("注册成功!");
+            render(oList);
+
+        }
+
+        function render(arr) {
+            var str = ``;
+            arr.forEach(function (item) {
+                str += `
+                        <tr>
+                            <td>${item.id}</td>
+                            <td>${item.name}</td>
+                            <td>${item.phone}</td>
+                            <td>
+                                <a href='javascript:void(0)' onclick=del(this,'${item.id}')>删除</a>
+                            </td>
+                        </tr>
+                    
+                    `
+            });
+            oTab.innerHTML = str;
+
+
+        }
+
+        function del(o, id) {
+
+            //id是唯一
+            var index = -1;
+            for (var i = 0; i < oList.length; i++) {
+                if (oList[i].id == id) {
+                    index = i;
+                    break;
+                }
+            }
+            //如果下标是-1,就不要删除
+            if (index != -1) {
+                oList.splice(index, 1);//删除数组的里的数据
+            }
+            //还要删除页面上的视觉效果
+            o.parentNode.parentNode.remove();
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		button{
+			width: 50px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+<button id="qqq"></button>
+<div id="qq">1</div>
+<div id="ww">2<div id="ee">3</div></div>
+<div id="rr">4</div>
+</body>
+<script>
+	document.getElementById("qqq").onclick=function x(){
+		document.getElementById("ww").style.color="pink";
+		var a=document.createElement("h1");
+		a.innerHTML="10";
+		document.getElementById("ww").insertBefore(a,document.getElementById("ee"));
+		var b=document.createElement("h1");
+		b.innerHTML="11";
+		document.getElementById("qq").appendChild(b)
+	}
+	
+</script>
+</html>

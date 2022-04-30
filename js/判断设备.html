@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+function x(){
+var n=navigator.appVersion.toLowerCase();
+var m="";
+if(n.indexOf("iphone")!==-1 || n.indexOf("ipad")!==-1){
+	m="ios";
+}
+if(n.indexOf("android")!==-1){
+	m="android";
+}
+if(n.indexOf("window")!==-1){
+	m="window";
+}
+return m;
+}
+console.log(x())
+</script>
+</html>

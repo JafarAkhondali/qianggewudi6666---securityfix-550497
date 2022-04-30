@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="uft-8">
+	<title></title>
+	</head>
+	<baby>
+		<form name="myform" action="login.php" method="post">
+		<table align="center">
+			<tr><td>用户名：</td><td><input type="text" name="yonghuming" placeholder="admin"></td><tr>
+			<tr><td>密码：</td><td><input type="password" name="mima"></td></tr>
+			<tr><td><label for="nan">男：</label><input type="checkBox" name="nan" id="nan" checked></td><td><label for="nv">女：</label><input type="checkBox" name="nv" id="nv"></td></tr>
+			<tr><td>文件：</td><td><input type="file" name="wenjian"></td></tr>
+			<tr><td>介绍：</td><td><textarea name="jieshao" cols="20" rows="10"></textarea></td></tr>
+			<tr><td>所在地：</td><td><select name="suozaidi" id="suozaidi">
+							<option readonly disable>请选择</option>
+						<optgroup label="河北">
+							<option value="秦皇岛" id="suozaidi">秦皇岛</option>
+							<option value="邯郸" id="suozaidi">邯郸</option>
+							<option value="唐山" id="suozaidi">唐山</option>
+						</optground>
+						<optgroup label="浙江">
+							<option value="金华" id="suozaidi">金华</option>
+							<option value="杭州" id="suozaidi">杭州</option>
+							<option value="台州" id="suozaidi">台州</option>
+						</optgroup>
+					</td>
+					</select>
+			</tr>
+			<tr><td>选项：</td><td><input list="word" type="text" name="xuanxiang">
+					<datalist id="word">
+					<option value="abcdefg">
+					<option value="hijklmn">
+					<option value="opqrstu">
+					</datalist></tr></td>
+			<tr><td>颜色：</td><td><input type="color" name="yanse"></td></tr>
+			<tr><td>日期：</td><td><input type="datetime-local" name="riqi"></td></tr>
+			<tr><td>电话：</td><td><input type="tel" name="dianhua"></td></tr>
+			<tr><td>邮箱：</td><td><input type="email" name="youxiang"></td></tr>
+			<tr><td>年龄：</td><td><input type="number" name="nianling" min="0" max="250"></td></tr>
+			<tr><td>滑块：</td><td><input type="range" name="huakuai"></td></tr>
+			<tr><td>搜索：</td><td><input type="search" name="sousuo"></td></tr>
+			<tr><td>网址：</td><td><input type="url" name="wangzhi"></td></tr>
+			<tr><td></td><td><input type="submit" name="tijiao">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" name="chongzhi"></td></tr>
+		</table>
+		</form>
+	</baby>
+</html>

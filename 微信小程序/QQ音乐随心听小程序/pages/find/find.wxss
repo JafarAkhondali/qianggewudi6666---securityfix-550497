@@ -1,0 +1,122 @@
+/* pages/find/find.wxss */
+page{
+  background-color: rgb(248, 255, 248);
+}
+.searchBox{
+  width: 90%;
+  height: 70rpx;
+  background-color: rgb(236, 236, 236);
+  margin:15rpx  auto;
+  border-radius: 60rpx;
+  overflow: hidden;
+}
+.searchBox .txt{
+  width: 68%;
+  height: 70rpx;
+  /* background-color: skyblue; */
+  float: left;
+  padding-left: 50rpx;
+  font-size: 25rpx;
+}
+.searchBox .btn{
+  width: 120rpx;
+  height: 70rpx;
+  /* background:yellow; */
+  float: right;
+  position: relative;
+}
+.searchBox .btn image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 0;left: 0;
+  right: 0;bottom: 0;
+  margin: auto;
+}
+
+.main{
+  width: 90%;
+  /* height: 600rpx; */
+  /* background-color: palegoldenrod; */
+  margin: 15rpx auto;
+  /* padding-bottom: 50rpx; */
+}
+.clearfix::after{
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  clear: both;
+
+}
+.main .top{
+  height: 60rpx;
+  /* padding-top: 30rpx; */
+  /* background-color: skyblue; */
+  
+}
+.top view{
+  font-size: 30rpx;
+  line-height:30rpx ;
+  padding: 5rpx 20rpx;
+}
+.top .tit_l{
+  float: left;
+  padding-left:0rpx ;
+}
+.top .tit_r{
+  float: right;
+  border: 1px solid #747474;
+  color:#747474;
+  border-radius:10rpx ;
+  
+}
+.picitem{
+  width: 180rpx;
+  height: 228rpx;
+  text-align: center;
+  /* background-color: cadetblue; */
+  float: left;
+  margin: 20rpx 23rpx;
+}
+.picitem image{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 20rpx;
+}
+.picitem text{
+  font-size:25rpx;
+  color: #555555;
+  width: 180rpx;
+  height: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.findbox{
+  width: 90%;
+  height: 300rpx;
+  margin: 15px auto;
+  /* background-color:pink; */
+}
+.findbox .finditem{
+  width: 160rpx;
+  height: 250rpx;
+  text-align: center;
+  float: left;
+  margin: 0 20rpx;
+}
+.finditem image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.finditem .txt{
+  font-size: 25rpx;
+}
+.findtext{
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+} 

@@ -1,0 +1,302 @@
+.qqq{
+    width: 1519px;
+    margin: 0 auto;
+}
+.qq{
+    margin-left: 300px;
+}
+.qq1{
+    margin-left: 250px;
+}
+.qq2{
+    width: 1519px;
+    margin: 0 auto;
+    display: block;
+    
+}
+.qq3{
+    margin-left: 15px;
+}
+.ee{
+    position: absolute;
+    top:52px; 
+    width: 100%;
+}
+.ww{
+    height: 100px;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    margin-left: -200px;
+}
+.ww1{
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.ww2{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.ww3{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.ww4{
+    color: white;
+    font-size: 20px;
+}
+.ww5{
+    font-size: 12px;
+}
+.ww2:hover>.ww4{
+    color: yellow;
+}
+.ww2:hover>.ww3>.ww5{
+    color: yellow;
+}
+.ww2:hover{
+    border-bottom:3px solid yellow;
+    background-image:linear-gradient(to bottom,lightyellow);
+}
+.ww6{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.ee1{
+    background: rgba(0,0,0,0.7);
+    display: none;
+    height: 400px;
+    width: 100%;
+}
+.ee:hover>.ee1{
+    display: inline-block;
+}
+.eee{
+    width: 1300px;
+    margin: 0 auto;
+}
+.ee2{
+    width: 100px;
+    margin-right: 6px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.ee3{
+    margin-left: 350px;
+}
+.ee4{
+    margin-bottom: 10px;
+}
+.ee5{
+    color: white;
+}
+.ee5:hover{
+    color: yellow;
+}
+.rr{
+    width: 1200px;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+    top:-130px;
+    background: #154a72;
+}
+.rr1{
+    color: white;
+    font-weight: 600;
+    margin-left: 20px;
+    font-size: 14px;
+    padding-top:10px;
+}
+.rr2{
+    margin-top: -15px;
+    margin-left: 20px;
+    display: flex;
+}
+.rr3{
+    width: 110px;
+    margin-left: 30px;
+    margin-top: -15px;
+}
+.rr4{
+    margin-top: 20px;
+}
+.rr5{
+    width: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.rr6{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.tt{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: -70px;
+}
+.tt1{
+    margin-top: 30px;
+}
+.tt2{
+    width: 320px;
+    height: 36px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: -30px;
+}
+.tt3{
+    margin-left: -5px;
+}
+.tt4{
+    float: right;
+}
+.tt5{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.tt6{
+    margin-right: 45px;
+}
+.tt7{
+    margin-right: 45px;
+    font-weight: 600;
+    color: blue;
+    border-bottom:5px solid blue;
+}
+.tt6:hover{
+    font-weight: 600;
+    color: blue;
+    border-bottom:5px solid blue;
+}
+.tt11:hover{
+    font-weight: 600;
+    color: blue;
+    border-bottom:5px solid blue;
+}
+.tt10{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.tt9{
+    margin-bottom: 10px;
+}
+.tt8{
+    color: black;
+    font-size: 14px;
+}
+.yy1{
+    margin-top: 70px;
+}
+.yy2{
+    display: block;
+    margin-top: -22px;
+    margin-left: 35px;
+    color: black;
+    font-weight: 600;
+}
+.yy3{
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.yy4{
+    margin-left: 750px;
+    margin-top: -210px;
+}
+.yy5{
+    display: block;
+    margin-top: -20px;
+    margin-left: 180px;
+}
+.yy6{
+    margin-top: 15px;
+}
+.uu{
+    margin-top: -90px;
+    margin-left: 240px;
+}
+.uu1{
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.uu2{
+    margin-top: 10px;
+}
+.uu3{
+    margin-top: 5px;
+}
+.uu4{
+    width: 80px;
+    height: 33px;
+    background: #3589dd;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: white;
+}
+.ii{
+    margin-top: 70px;
+}
+.ii1{
+    margin-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+.ii2{
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.ii3{
+    width: 188px;
+    background:rgba(0,0,0,0.7) ;
+    position: relative;
+    top:-22px;
+    color: white;
+}
+.ii4{
+    float: right;
+}
+.ii5{
+    display: flex;
+}
+.ii6{
+    width: 188px;
+    color: black;
+    font-weight: 600;
+    position: relative;
+    top:-10px;
+}
+.ii7{
+    margin-top: -20px;
+}
+.oo{
+    margin-top: 100px;
+}
+.oo1{
+    width: 523px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.oo2{
+    width: 523px;
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.oo3{
+   float: right;
+   font-size: 12px;
+   margin-top: -90px;
+}
+.oo4{
+    margin-top: 10px;
+}
+.oo5{
+    margin-top: 20px;
+}
+.oo6{
+    margin-top: 10px;
+}
+
